@@ -23,13 +23,13 @@ jobs:
                   include-prerelease: true
 
             - name: Restore dependencies
-              run: dotnet restore SpelletjesAvond/SpelletjesAvond.csproj
+              run: dotnet restore ../SpelletjesAvond/SpelletjesAvond.csproj
 
-            - name: Build SpelletjesAvond
-              run: dotnet build SpelletjesAvond/SpelletjesAvond.csproj --configuration Release
+            - name: Build project
+              run: dotnet build ../SpelletjesAvond/SpelletjesAvond.csproj --configuration Release
 
-            - name: Publish SpelletjesAvond
-              run: dotnet publish SpelletjesAvond/SpelletjesAvond.csproj --configuration Release -o ${{env.DOTNET_ROOT}}/myapp
+            - name: Publish project
+              run: dotnet publish ../SpelletjesAvond/SpelletjesAvond.csproj --configuration Release -o ${{env.DOTNET_ROOT}}/myapp
 
             - name: Upload artifact for deployment job
               uses: actions/upload-artifact@v3
