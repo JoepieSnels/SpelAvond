@@ -20,13 +20,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-    <ItemGroup>
-    <None Update="appsettings.json">
-      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-    </None>
-    <None Update="appsettings.Development.json">
-      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-    </None>
-  </ItemGroup>
+    <PropertyGroup>
+      <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+    </PropertyGroup>
 
 </Project>

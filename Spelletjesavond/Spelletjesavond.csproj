@@ -16,18 +16,8 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj" />
-    <ProjectReference Include="..\DomainServices\DomainServices.csproj" />
-    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
-  </ItemGroup>
-    <ItemGroup>
-    <None Update="appsettings.json">
-      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-    </None>
-    <None Update="appsettings.Development.json">
-      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-    </None>
-  </ItemGroup>
+  <PropertyGroup>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
 
 </Project>
