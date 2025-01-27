@@ -1,8 +1,8 @@
+
+name: Build, test, and deploy ASP.Net Core app to Azure Web App - SpelletjesAvond
+
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
-
-name: Build and deploy SpelletjesAvond to Azure Web App
-
 on:
     push:
         branches:
@@ -23,13 +23,18 @@ jobs:
                   include-prerelease: true
 
             - name: Restore dependencies
-              run: dotnet restore ../SpelletjesAvond/SpelletjesAvond.csproj
 
-            - name: Build project
-              run: dotnet build ../SpelletjesAvond/SpelletjesAvond.csproj --configuration Release
+              run: dotnet restore
 
-            - name: Publish project
-              run: dotnet publish ../SpelletjesAvond/SpelletjesAvond.csproj --configuration Release -o ${{env.DOTNET_ROOT}}/myapp
+            - name: Build with dotnet
+              run: dotnet build --configuration Release
+
+            - name: Run tests
+              run: dotnet test --configuration Release --no-build --logger "trx;LogFileName=test_results.trx"
+
+            - name: Publish application
+              run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+
 
             - name: Upload artifact for deployment job
               uses: actions/upload-artifact@v3
@@ -54,7 +59,9 @@ jobs:
               id: deploy-to-webapp
               uses: azure/webapps-deploy@v2
               with:
-                  app-name: "SpelletjesAvond" # Zorg ervoor dat je de juiste Azure app naam gebruikt
+                  app-name: "SpelletjesAvond"
                   slot-name: "Production"
                   publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA3C340240B742C78F859ED1FC505524 }}
-                  package: ${{env.DOTNET_ROOT}}/myapp
+                  package: .
+
+   

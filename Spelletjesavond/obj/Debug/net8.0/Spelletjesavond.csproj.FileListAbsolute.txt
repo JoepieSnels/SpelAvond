@@ -365,6 +365,6 @@ C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\SpelletjesAvond\obj\
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\SpelletjesAvond\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\SpelletjesAvond\obj\Debug\net8.0\scopedcss\bundle\Spelletjesavond.styles.css
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\SpelletjesAvond\obj\Debug\net8.0\scopedcss\projectbundle\Spelletjesavond.bundle.scp.css
-C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\Spelletjesavond\obj\Debug\net8.0\Spelletj.F8EA6790.Up2Date
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\Spelletjesavond\obj\Debug\net8.0\Spelletjesavond.genruntimeconfig.cache
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\Spelletjesavond\obj\Debug\net8.0\ref\Spelletjesavond.dll
+C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\SpelletjesAvond\obj\Debug\net8.0\Spelletj.9E2E75F0.Up2Date
