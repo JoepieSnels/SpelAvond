@@ -1,5 +1,8 @@
+
 name: Build, test, and deploy ASP.Net Core app to Azure Web App - SpelletjesAvond
 
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
 on:
     push:
         branches:
@@ -20,6 +23,7 @@ jobs:
                   include-prerelease: true
 
             - name: Restore dependencies
+
               run: dotnet restore
 
             - name: Build with dotnet
@@ -30,6 +34,7 @@ jobs:
 
             - name: Publish application
               run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+
 
             - name: Upload artifact for deployment job
               uses: actions/upload-artifact@v3
@@ -58,3 +63,5 @@ jobs:
                   slot-name: "Production"
                   publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA3C340240B742C78F859ED1FC505524 }}
                   package: .
+
+   
