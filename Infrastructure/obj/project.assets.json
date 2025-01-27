@@ -109,7 +109,6 @@
       "Microsoft.AspNetCore.Identity.UI/9.0.1": {
         "type": "package",
         "build": {
-          "build/Microsoft.AspNetCore.Identity.UI.props": {},
           "buildTransitive/Microsoft.AspNetCore.Identity.UI.targets": {}
         },
         "buildMultiTargeting": {
@@ -5077,7 +5076,6 @@
       "Domain >= 1.0.0",
       "DomainServices >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.0",
-      "Microsoft.AspNetCore.Identity.UI >= 9.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.1"
     ]
@@ -5088,11 +5086,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5107,11 +5105,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\DomainServices\\DomainServices.csproj": {
-              "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\DomainServices\\DomainServices.csproj"
+            "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\DomainServices\\DomainServices.csproj": {
+              "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\DomainServices\\DomainServices.csproj"
             },
-            "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Domain\\Domain.csproj"
+            "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Domain\\Domain.csproj"
             }
           }
         }
@@ -5134,10 +5132,6 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.0, )"
-          },
-          "Microsoft.AspNetCore.Identity.UI": {
-            "target": "Package",
-            "version": "[9.0.1, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",

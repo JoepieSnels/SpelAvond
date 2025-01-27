@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "rrY/H6y5UkwfIfsfFLFZmGLZfj0WRmX7UzKDDDPSjUI=",
+  "Hash": "aXekdmrzfxKwvTsZ0ZKUdIDsfTV13vHT8e1p4XSC8iU=",
   "Source": "Infrastructure",
   "BasePath": "_content/Infrastructure",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\DomainServices\\DomainServices.csproj",
+      "Identity": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\DomainServices\\DomainServices.csproj",
       "Version": 2,
       "Source": "DomainServices",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",

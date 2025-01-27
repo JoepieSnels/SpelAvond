@@ -487,11 +487,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\API\\API.csproj",
+      "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\API\\obj\\",
+      "outputPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config"

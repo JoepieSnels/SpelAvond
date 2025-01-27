@@ -10,11 +10,10 @@
 using System;
 using System.Reflection;
 
-
 [assembly: System.Reflection.AssemblyCompanyAttribute("Spelletjesavond")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f042a0bdea7c92293bb51fa19b104b37fecc1f9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+241fdd8227af68926cf9584a6ac656f0e5c474cd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Spelletjesavond")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Spelletjesavond")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

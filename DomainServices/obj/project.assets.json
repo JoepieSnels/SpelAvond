@@ -967,11 +967,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\DomainServices\\DomainServices.csproj",
+      "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\DomainServices\\DomainServices.csproj",
       "projectName": "DomainServices",
-      "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\DomainServices\\DomainServices.csproj",
+      "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\DomainServices\\DomainServices.csproj",
       "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\DomainServices\\obj\\",
+      "outputPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\DomainServices\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -986,8 +986,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Domain\\Domain.csproj"
+            "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Domain\\Domain.csproj"
             }
           }
         }

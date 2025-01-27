@@ -950,11 +950,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config"
