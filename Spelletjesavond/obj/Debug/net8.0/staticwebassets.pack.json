@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\SpelletjesAvond\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Spelletjesavond.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Spelletjesavond.bundle.scp.css"
+      "Id": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\SpelletjesAvond\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SpelletjesAvond.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SpelletjesAvond.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\SpelletjesAvond\\wwwroot\\css\\site.css",
@@ -249,20 +249,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Spelletjesavond.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SpelletjesAvond.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Spelletjesavond.props",
-      "PackagePath": "build\\Spelletjesavond.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.SpelletjesAvond.props",
+      "PackagePath": "build\\SpelletjesAvond.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Spelletjesavond.props",
-      "PackagePath": "buildMultiTargeting\\Spelletjesavond.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SpelletjesAvond.props",
+      "PackagePath": "buildMultiTargeting\\SpelletjesAvond.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Spelletjesavond.props",
-      "PackagePath": "buildTransitive\\Spelletjesavond.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.SpelletjesAvond.props",
+      "PackagePath": "buildTransitive\\SpelletjesAvond.props"
     }
   ],
   "ElementsToRemove": []

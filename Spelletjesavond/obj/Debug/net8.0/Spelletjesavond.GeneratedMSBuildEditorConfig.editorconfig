@@ -15,77 +15,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = Spelletjesavond
-build_property.RootNamespace = Spelletjesavond
-build_property.ProjectDir = C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\Spelletjesavond\
+build_property.RootNamespace = SpelletjesAvond
+build_property.RootNamespace = SpelletjesAvond
+build_property.ProjectDir = C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\SpelletjesAvond\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\Spelletjesavond
+build_property.MSBuildProjectDirectory = C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\SpelletjesAvond
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Home/AvailableGameNights.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Home/AvailableGameNights.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBdmFpbGFibGVHYW1lTmlnaHRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Home/CreateGameNight.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Home/CreateGameNight.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVHYW1lTmlnaHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Home/EditGameNight.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Home/EditGameNight.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0R2FtZU5pZ2h0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Home/GameInfo.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Home/GameInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW1lSW5mby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Home/GamenightInfo.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Home/GamenightInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW1lbmlnaHRJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Home/Index.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Home/MyGameNights.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Home/MyGameNights.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNeUdhbWVOaWdodHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Home/Privacy.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Home/WriteReview.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Home/WriteReview.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXcml0ZVJldmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Login/Login.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Login/MakeAccount.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Login/MakeAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTWFrZUFjY291bnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Shared/Error.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/_ViewImports.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/_ViewStart.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/Spelletjesavond/Views/Shared/_Layout.cshtml]
+[C:/Users/Gebruiker/Documents/IndividueleC\#project/SpelAvond/SpelletjesAvond/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-30m0l01yqt
+build_metadata.AdditionalFiles.CssScope = b-dl73u7bwbt

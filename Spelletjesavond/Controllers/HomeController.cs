@@ -147,6 +147,8 @@ public class HomeController : Controller
     }
 
 
+    [Authorize]
+    [HttpGet]
     public IActionResult CreateGameNight()
     {
         // Haal het e-mailadres van de ingelogde gebruiker op
