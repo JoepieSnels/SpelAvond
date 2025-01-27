@@ -21,7 +21,8 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\DomainServices\DomainServices.csproj" />
   </ItemGroup>
-<PropertyGroup>
-  <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
-</PropertyGroup>
+
+  <PropertyGroup>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
 </Project>
