@@ -4,54 +4,57 @@
 name: Build and deploy ASP.Net Core app to Azure Web App - ServerSide
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v4
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
 
-      - name: Set up .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '8.x'
-          include-prerelease: true
+            - name: Set up .NET Core
+              uses: actions/setup-dotnet@v1
+              with:
+                  dotnet-version: "8.x"
+                  include-prerelease: true
 
-      - name: Build with dotnet
-        run: dotnet build --configuration Release
+            - name: Restore dependencies
+              run: dotnet restore Spelletjesavond.sln
 
-      - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+            - name: Build with dotnet
+              run: dotnet build Spelletjesavond.sln --configuration Release
 
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
-        with:
-          name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
+            - name: Publish application
+              run: dotnet publish Spelletjesavond.sln --configuration Release --output ./publish
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+            - name: Upload artifact for deployment job
+              uses: actions/upload-artifact@v3
+              with:
+                  name: .net-app
+                  path: ./publish
 
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v3
-        with:
-          name: .net-app
+    deploy:
+        runs-on: ubuntu-latest
+        needs: build
+        environment:
+            name: "Production"
 
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'ServerSide'
-          slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1A3270E2FAE34ECFAA2342118A1AE526 }}
-          package: .
+        steps:
+            - name: Download artifact from build job
+              uses: actions/download-artifact@v3
+              with:
+                  name: .net-app
+
+            - name: Deploy to Azure Web App
+              id: deploy-to-webapp
+              uses: azure/webapps-deploy@v2
+              with:
+                  app-name: "ServerSide" # Zorg ervoor dat de naam overeenkomt met je Azure Web App-naam
+                  slot-name: "Production"
+                  publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1A3270E2FAE34ECFAA2342118A1AE526 }}
+                  package: ./publish
