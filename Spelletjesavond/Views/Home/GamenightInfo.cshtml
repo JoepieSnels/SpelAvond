@@ -1,0 +1,125 @@
+@model GameNightDetailsModel
+
+<div class="container">
+    <h1>Details voor Spellenavond</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <h3>Georganiseerd door:</h3>
+            <p><strong>Host:</strong> @Model.host.firstName @Model.host.lastName</p>
+            <p><strong>Locatie:</strong> @Model.address</p>
+            <p><strong>Datum:</strong> @Model.dateTime.ToString("dd-MM-yyyy HH:mm")</p>
+            <p><strong>Maximale spelers:</strong> @Model.maxPlayers</p>
+        </div>
+    </div>
+
+   <div class="mt-4">
+    <h3>Spelers</h3>
+    @if (Model.players.Any())
+    {
+        <ul>
+            @foreach (var player in Model.players)
+            {
+            <li>
+                @player.firstName @player.lastName
+                @if (!player.lactoseFree) { <span class="badge text-danger">Lactosevrij</span> }
+                @if (!player.nutFree) { <span class="badge text-danger">Notenvrij</span> }
+                @if (!player.vegatarian) { <span class="badge text-danger">Vegetarisch</span> }
+                @if (!player.alcoholic) { <span class="badge text-danger">Alcoholvrij</span> }
+</li>
+
+            }
+        </ul>
+    }
+    else
+    {
+        <p>Geen spelers zijn geregistreerd.</p>
+    }
+</div>
+
+
+    <div class="mt-4">
+        <h3>Beschikbare Spellen</h3>
+        <ul>
+            @foreach (var game in Model.games)
+            {
+                <li>@game.name</li>
+            }
+        </ul>
+    </div>
+
+
+    <div class="mt-4">
+        <h3>Eten en Drank</h3>
+        <ul>
+            <li><strong>Eten:</strong> @Model.food</li>
+            <li><strong>Lactosevrij:</strong> @(Model.lactoseFree ? "Ja" : "Nee")</li>
+            <li><strong>Alcohol:</strong> @(Model.alcoholic ? "Ja" : "Nee")</li>
+            <li><strong>Notenvrij:</strong> @(Model.nutFree ? "Ja" : "Nee")</li>
+            <li><strong>Vegetarisch:</strong> @(Model.vegetarian ? "Ja" : "Nee")</li>
+            <li><strong>18+:</strong> @(Model.is18Plus ? "Ja" : "Nee")</li>
+        </ul>
+    </div>
+
+    <div class="mt-4">
+    <h3>Recensies</h3>
+    @if (Model.reviews.Any())
+    {
+        <ul>
+            @foreach (var review in Model.reviews)
+            {
+                <li>
+                    <strong>@review.reviewer.firstName @review.reviewer.lastName</strong> (Score: @review.rating)<br />
+                    @review.comment
+                </li>
+            }
+        </ul>
+
+        <p>Gemiddelde score: @Model.averageScore</p>
+    
+    }
+    else
+    {
+        <p>Geen recensies beschikbaar.</p>
+    }
+    <div class="mt-4">
+    <h3>Laat een review achter</h3>
+    
+    @if (Model.dateTime < DateTime.Now)
+    {
+        @if (!Model.hasReviewed)
+        {
+            <a asp-action="WriteReview" asp-controller="Home" asp-route-id="@Model.gameNightId" class="btn btn-primary">Review Schrijven</a>
+        }
+        else
+        {
+            <p>Je hebt al een review geschreven voor deze spellenavond.</p>
+        }
+    }
+    else
+    {
+        <p>De spellenavond is nog niet geweest. Je kunt pas een review achterlaten als deze heeft plaatsgevonden.</p>
+    }
+</div>
+
+
+
+    <!-- Inschrijving knop (alleen als de gebruiker zich nog niet heeft ingeschreven) -->
+   @if (!Model.isAlreadySignedUp)
+{
+    <div class="mt-4">
+        <form method="post" asp-action="SignUpForGameNight" asp-controller="Home">
+            <!-- Voeg de gameNightId toe als hidden field -->
+            <input type="hidden" name="gameNightId" value="@Model.gameNightId" />
+            <button type="submit" class="btn btn-success">Inschrijven</button>
+        </form>
+    </div>
+}
+else
+{
+    <div class="mt-4">
+        <button class="btn btn-secondary" disabled>Je bent al ingeschreven</button>
+    </div>
+}
+
+</div>

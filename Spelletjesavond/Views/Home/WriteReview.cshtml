@@ -1,0 +1,29 @@
+@model ReviewViewModel
+
+<h3>Schrijf een Review voor GameNight @Model.gameNightId</h3>
+
+<form method="post" asp-action="SubmitReview" asp-controller="Home">
+    <!-- GameNightId is automatisch gebonden aan de model, je hoeft geen extra inputvelden toe te voegen -->
+    <div class="form-group">
+        <label for="score">Score (1-5):</label>
+        <select asp-for="rating" class="form-control" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+    
+    <input type="hidden" name="GameNightId" value="@Model.gameNightId" />
+
+
+    <div class="form-group">
+        <label for="review">Je Review:</label>
+        <textarea asp-for="comment" class="form-control" rows="4" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-success">Review Indienen</button>
+    </div>
+</form>

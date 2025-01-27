@@ -1,0 +1,64 @@
+﻿@model List<GameNightDetailsModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welkom bij Spleren</h1>
+</div>
+
+<div class="text-center p-2">
+    <h2>Hier doe jij aan mee!</h2>
+
+    <!-- Controleer of er game nights beschikbaar zijn -->
+    @if (Model != null && Model.Any())
+    {
+        <!-- Tabel met Game Nights -->
+        <table class="table table-bordered table-striped table-sm">
+            <thead>
+                <tr>
+                    <th>Organisator</th>
+                    <th>Datum</th>
+                    <th>Locatie</th>
+                    <th>Spellen</th>
+                    <th>Acties</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var gameNight in Model)
+                {
+                    <tr>
+                        <!-- Organisator -->
+                        <td>@gameNight.host.firstName</td>
+                        <!-- Datum -->
+                        <td>@gameNight.dateTime</td>
+                        <!-- Locatie -->
+                        <td>@gameNight.address</td>
+                        <!-- Spellen (met een lijst) -->
+                        <td>
+                            <ul>
+                                @foreach(var game in gameNight.games)
+                                {
+                                    <li>
+                                        <a asp-action="GameInfo" asp-controller="Home" asp-route-id="@game.gameId">@game.name</a>
+                                    </li>
+                                }
+                            </ul>
+                        </td>
+                        <td>
+                            <a asp-action="GamenightInfo" asp-controller="Home" asp-route-id="@gameNight.gameNightId" class="btn btn-primary">
+                                Bekijk Details
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <!-- Bericht als er geen game nights beschikbaar zijn -->
+        <p>Je hebt je nog voor geen game nights ingeschreven.</p>
+    }
+</div>

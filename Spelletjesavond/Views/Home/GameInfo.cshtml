@@ -1,0 +1,57 @@
+@model IndividueleCSharpProject.Domain.Games
+
+@{
+    ViewData["Title"] = "Game Informatie";
+}
+
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Kaart voor het weergeven van de game-informatie -->
+                <div class="card shadow-lg">
+                    <!-- Afbeelding van de game -->
+                    <img src="@Model.image" class="card-img-top" alt="@Model.name" style="height: 300px; object-fit: cover;">
+
+                    <div class="card-body">
+                        <!-- Naam van de game -->
+                        <h2 class="card-title text-primary">@Model.name</h2>
+                        
+                        <!-- Beschrijving van de game -->
+                        <p class="card-text text-muted">@Model.description</p>
+
+                        <!-- Genre en Type van de game -->
+                        <p class="text-info">
+                            <strong>Genre:</strong> @Model.genre
+                        </p>
+                        <p class="text-info">
+                            <strong>Type van het spel:</strong> @Model.typeOfGame
+                        </p>
+
+                        <!-- 18+ Informatie -->
+                        <div class="badge bg-danger text-white">
+                            @if (Model.is18Plus)
+                            {
+                                <span>18+ (Alleen voor volwassenen)</span>
+                            }
+                            else
+                            {
+                                <span>Geschikt voor alle leeftijden</span>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

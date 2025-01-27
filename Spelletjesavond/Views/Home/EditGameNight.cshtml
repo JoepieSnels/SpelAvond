@@ -1,0 +1,138 @@
+@model GameNightModel
+@{
+    ViewData["Title"] = "Bewerk Spelavond";
+}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <h1 class="display-4 text-primary">Bewerk een Spelavond</h1>
+            <p class="lead text-secondary">Wijzig de details van je spelavond en voeg eventuele aanpassingen toe.</p>
+        </div>
+        <div class="card shadow-sm p-4">
+            <form method="post">
+                <div asp-validation-summary="All" class="alert alert-danger" role="alert"></div>
+
+                <!-- Datum -->
+                <div class="mb-3">
+                    <label asp-for="dateTime" class="form-label">Datum</label>
+                    <input asp-for="dateTime" type="datetime-local" class="form-control" id="dateTime" />
+                </div>
+
+                <!-- Locatie -->
+                <div class="mb-3">
+                    <label asp-for="address" class="form-label">Locatie</label>
+                    <input asp-for="address" type="text" class="form-control" id="address" />
+                </div>
+
+                <!-- Maximaal aantal spelers -->
+                <div class="mb-3">
+                    <label asp-for="maxPlayers" class="form-label">Maximaal aantal spelers</label>
+                    <input asp-for="maxPlayers" type="number" class="form-control" id="maxPlayers" />
+                </div>
+
+                <!-- Spellen Selectie -->
+                <div class="mb-3">
+                    <label class="form-label">Spellen</label>
+                    <select asp-for="games" class="form-select" multiple asp-items="ViewBag.Games"></select>
+                    <span asp-validation-for="games" class="text-danger"></span>
+                </div>
+
+                <!-- Eten en drinken -->
+                <div class="mb-3">
+                    <label class="form-label">Eten & drinken</label>
+                    <div id="foodFields">
+                        @for (int i = 0; i < Model.food?.Count; i++)
+                        {
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control" id="food_@i" name="food" value="@Model.food[i]" placeholder="Voer eten of drinken in"/>
+                                <button type="button" class="btn btn-outline-danger removeFoodButton">-</button>
+                            </div>
+                        }
+                    </div>
+                    <button type="button" class="btn btn-outline-success" id="addFoodButton">+</button>
+                </div>
+
+                <!-- 18+ Schakelaar -->
+                <div class="form-check form-switch mb-3">   
+                <input asp-for="is18Plus" type="checkbox" class="form-check-input" id="is18Plus" />
+                <label asp-for="is18Plus" class="form-check-label">Is deze avond voor 18+?</label>
+                </div>
+
+                <!-- Dieetvoorkeuren -->
+                <div class="form-check mb-3">   
+                <input asp-for="lactoseFree" type="checkbox" class="form-check-input" id="lactoseFree" />
+                <label asp-for="lactoseFree" class="form-check-label">Lactosevrij</label>
+                </div>
+                <div class="form-check mb-3">   
+                <input asp-for="nutFree" type="checkbox" class="form-check-input" id="nutFree" />
+                <label asp-for="nutFree" class="form-check-label">Notenvrij</label>
+                </div>
+                <div class="form-check mb-3">   
+                <input asp-for="vegetarian" type="checkbox" class="form-check-input" id="vegetarian" />
+                <label asp-for="vegetarian" class="form-check-label">Vegetarisch</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input asp-for="alcoholic" type="checkbox" class="form-check-input" id="alcoholic" />
+                    <label asp-for="alcoholic" class="form-check-label">Alcoholisch</label>
+                </div>
+                <div>
+                    <input asp-for="gameNightId" type="hidden" />
+                </div>
+
+                <!-- Knoppen -->
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary px-4">Opslaan</button>
+                    <button type="reset" class="btn btn-secondary px-4">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let foodFieldIndex = @Model.food?.Count ?? 1; // Start bij het aantal bestaande velden
+            const foodFieldsContainer = document.getElementById("foodFields");
+            const addFoodButton = document.getElementById("addFoodButton");
+
+            // Eten & drinken toevoegen
+            addFoodButton.addEventListener("click", function () {
+                foodFieldIndex++;
+                const newFoodField = document.createElement("div");
+                newFoodField.classList.add("input-group", "mb-2");
+                newFoodField.innerHTML = `
+                    <input type="text" class="form-control" id="food_${foodFieldIndex}" name="food" placeholder="Voer eten of drinken in"/>
+                    <button type="button" class="btn btn-outline-danger removeFoodButton">-</button>
+                `;
+                foodFieldsContainer.appendChild(newFoodField);
+
+                // Functionaliteit om een veld te verwijderen
+                newFoodField.querySelector(".removeFoodButton").addEventListener("click", function () {
+                    newFoodField.remove();
+                });
+            });
+
+            // Alcohol en 18+ logica
+            const alcoholicCheckbox = document.getElementById("alcoholic");
+            const is18PlusCheckbox = document.getElementById("is18Plus");
+
+            alcoholicCheckbox.addEventListener("change", function () {
+                if (alcoholicCheckbox.checked) {
+                    is18PlusCheckbox.checked = true;
+                    is18PlusCheckbox.disabled = true;
+                } else {
+                    is18PlusCheckbox.disabled = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

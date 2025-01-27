@@ -1,0 +1,50 @@
+@model Spelletjesavond.Models.LoginModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <script src="https://kit.fontawesome.com/ef708f113d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="card col-6">
+            <div class="card-header">
+                Login
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="form-group">
+                        <!-- Validatie berichten -->
+                        <div asp-validation-summary="All"></div>
+                        
+                        <!-- Email input -->
+                        <label asp-for="email" class="col-2">Email</label>
+                        <input asp-for="email" type="email" class="form-control col-8" id="email" name="email" alt="email_invoer_veld" />
+
+                        <!-- Wachtwoord input -->
+                        <label asp-for="password" class="col-2">Wachtwoord</label>
+                        <input asp-for="password" type="password" class="form-control col-8" id="password" name="password" alt="Wachtwoord_invoer_veld" />
+
+                        <!-- RememberMe checkbox -->
+                        <div class="form-check mt-3">
+                            <input asp-for="rememberMe" type="checkbox" class="form-check-input" id="rememberMe" />
+                            <label class="form-check-label" for="rememberMe">Blijf ingelogd</label>
+                        </div>
+                    </div>
+                    <div>
+                        <input asp-action="Login" type="submit" class="btn btn-primary" value="Login" />
+                        <input type="button" class="btn btn-primary" value="Maak account" onclick="window.location.href = '/Login/MakeAccount';" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
