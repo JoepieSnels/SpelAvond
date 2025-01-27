@@ -58,4 +58,4 @@ jobs:
                   app-name: "ServerSide"
                   slot-name: "Production"
                   publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1A3270E2FAE34ECFAA2342118A1AE526 }}
-                  package: Spelletjesavond/bin/Release/net8.0/publish/
+                  package: ${{env.DOTNET_ROOT}}/myapp
