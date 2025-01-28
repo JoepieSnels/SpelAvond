@@ -34,8 +34,6 @@ C:\Users\Gebruiker\Documents\IndividueleC#project\DomainServices\bin\Debug\net8.
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\obj\Debug\net8.0\DomainServices.dll
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\obj\Debug\net8.0\refint\DomainServices.dll
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\obj\Debug\net8.0\DomainServices.pdb
-C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\bin\Debug\net8.0\appsettings.json
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\bin\Debug\net8.0\DomainServices.exe
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\bin\Debug\net8.0\DomainServices.deps.json
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\bin\Debug\net8.0\DomainServices.runtimeconfig.json
@@ -65,3 +63,5 @@ C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\obj\D
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\obj\Debug\net8.0\DomainSe.7BD32716.Up2Date
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\obj\Debug\net8.0\DomainServices.genruntimeconfig.cache
 C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\obj\Debug\net8.0\ref\DomainServices.dll
+C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\bin\Debug\net8.0\appsettings.DomainServices.Development.json
+C:\Users\Gebruiker\Documents\IndividueleC#project\SpelAvond\DomainServices\bin\Debug\net8.0\appsettings.DomainServices.json
