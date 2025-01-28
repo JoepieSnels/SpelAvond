@@ -12,10 +12,12 @@ namespace IndividueleCSharpProject.Api.Controllers
     public class GameNightController : ControllerBase
     {
         private readonly IGameNightRepository _gameNightRepository;
+        private readonly IReviewsRepository _reviewsRepository;
 
-        public GameNightController(IGameNightRepository gameNightRepository)
+        public GameNightController(IGameNightRepository gameNightRepository, IReviewsRepository reviewsRepository)
         {
             _gameNightRepository = gameNightRepository;
+            _reviewsRepository = reviewsRepository;
         }
 
         // GET: api/gamenight
@@ -47,6 +49,8 @@ namespace IndividueleCSharpProject.Api.Controllers
             _gameNightRepository.AddGameNight(gameNight);
             return CreatedAtAction(nameof(GetGameNight), new { id = gameNight.gameNightId }, gameNight);
         }
+
+
 
         // PUT: api/gamenight/{id}
         [HttpPut("{id}")]
@@ -90,5 +94,57 @@ namespace IndividueleCSharpProject.Api.Controllers
             _gameNightRepository.AddGameNightPlayer(gameNightId, personId);
             return Ok(new { Message = "Player added to game night successfully!" });
         }
+        // GET: api/gamenight/{gameNightId}/games
+        [HttpGet("{gameNightId}/games")]
+        public IActionResult GetGamesForGameNight(int gameNightId)
+        {
+            var gameNight = _gameNightRepository.GetGameNight(gameNightId);
+            if (gameNight == null)
+                return NotFound();
+
+            return Ok(gameNight.games);
+
+        }
+        // GET: api/gamenight/{gameNightId}/food-and-drinks
+        [HttpGet("{gameNightId}/food")]
+        public IActionResult GetFoodAndDrinksForGameNight(int gameNightId)
+        {
+            var gameNight = _gameNightRepository.GetGameNight(gameNightId);
+            if (gameNight == null)
+                return NotFound();
+
+            return Ok(gameNight.food); // Assuming foodAndDrinkOptions is a property in GameNight
+        }   
+        // POST: api/gamenight/{gameNightId}/reviews
+        [HttpPost("{gameNightId}/reviews")]
+    public IActionResult AddReview(int gameNightId, [FromBody] Review review)
+    {
+        var gameNight = _gameNightRepository.GetGameNights().Include(g => g.players).FirstOrDefault(g => g.gameNightId == gameNightId);
+        if (gameNight == null)
+            return NotFound();
+
+        if (review == null || string.IsNullOrEmpty(review.comment) || review.rating < 1 || review.rating > 5)
+            return BadRequest("Invalid review data.");
+        review.gameNightId = gameNightId;
+        review.reviewerId = review.reviewer.personId;
+
+        _reviewsRepository.AddReview(review);
+        return Ok(new { Message = "Review added successfully!" });
+    }
+    // GET: api/gamenight/{gameNightId}/reviews
+    [HttpGet("{gameNightId}/reviews")]
+    public IActionResult GetReviewsForGameNight(int gameNightId)
+    {
+        var gameNight = _gameNightRepository.GetGameNights().Include(g => g.reviews).FirstOrDefault(g => g.gameNightId == gameNightId);
+        if (gameNight == null)
+            return NotFound();
+
+        return Ok(gameNight.reviews); // Assuming reviews is a property in GameNight
+    }
+
+
+
+
+
     }
 }

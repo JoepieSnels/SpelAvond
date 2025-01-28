@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "B38nq8WoA9jzGAK/cOYuTzXQZ5gdthtDXEB/qw2755s=",
+  "Hash": "6DOOrwY7kslMy99XAXLBdN7JNmcC6sW87HLV6iqXWfs=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\DomainServices\\DomainServices.csproj",
+      "Identity": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Spelavond\\DomainServices\\DomainServices.csproj",
       "Version": 2,
       "Source": "DomainServices",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",

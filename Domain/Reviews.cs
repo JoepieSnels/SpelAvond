@@ -23,12 +23,12 @@ namespace IndividueleCSharpProject.Domain
         public string comment { get; set; }
         public Person reviewer { get; set; }
         [ForeignKey("personId")]
-        public int reviewerId { get; init; }
+        public int reviewerId { get; set; }
         
         
         public GameNight gameNight { get; set; }
         [ForeignKey("gameNightId")]
-        public int gameNightId { get; init; }
+        public int gameNightId { get; set; }
 
          public Review() { }
 

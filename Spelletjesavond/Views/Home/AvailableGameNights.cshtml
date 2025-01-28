@@ -1,41 +1,53 @@
 @model List<GameNightOverviewModel>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spelavonden</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="wwwroot/css/site.css" asp-append-version="true"/>
+    </head>
 
-<div class="container mt-5">
-    <h1 class="text-primary">Beschikbare Spelavonden</h1>
-    <p class="lead text-secondary">Bekijk en schrijf je in voor een van de beschikbare spelavonden!</p>
+<body>
+    
 
-    @if (!Model.Any())
-    {
-        <div class="alert alert-info">Er zijn momenteel geen beschikbare spelavonden.</div>
-    }
-    else
-    {
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Datum</th>
-                    <th>Locatie</th>
-                    <th>Spelers</th>
-                    <th>18+</th>
-                    <th>Acties</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var gameNight in Model)
-                {
+
+    <div class="container mt-5">
+        <h1 class="text-primary">Beschikbare Spelavonden</h1>
+        <p class="lead text-secondary">Bekijk en schrijf je in voor een van de beschikbare spelavonden!</p>
+
+        @if (!Model.Any())
+        {
+            <div class="alert alert-info">Er zijn momenteel geen beschikbare spelavonden.</div>
+        }
+        else
+        {
+            <table class="table table-striped">
+                <thead>
                     <tr>
-                        <td>@gameNight.dateTime.ToShortDateString() @gameNight.dateTime.ToShortTimeString()</td>
-                        <td>@gameNight.address</td>
-                        <td>@gameNight.currentPlayersCount / @gameNight.maxPlayers</td>
-                        <td>@(gameNight.is18Plus ? "Ja" : "Nee")</td>
-                        <td>
-                            <a asp-action="GamenightInfo" asp-controller="Home" asp-route-id="@gameNight.gameNightId" class="btn btn-primary">
-                                Bekijk Details
-                            </a>
-                        </td>
+                        <th>Datum</th>
+                        <th>Locatie</th>
+                        <th>Spelers</th>
+                        <th>18+</th>
+                        <th>Acties</th>
                     </tr>
-                }
-            </tbody>
-        </table>
-    }
-</div>
+                </thead>
+                <tbody>
+                    @foreach (var gameNight in Model)
+                    {
+                        <tr>
+                            <td>@gameNight.dateTime.ToShortDateString() @gameNight.dateTime.ToShortTimeString()</td>
+                            <td>@gameNight.address</td>
+                            <td>@gameNight.currentPlayersCount / @gameNight.maxPlayers</td>
+                            <td>@(gameNight.is18Plus ? "Ja" : "Nee")</td>
+                            <td>
+                                <a asp-action="GamenightInfo" asp-controller="Home" asp-route-id="@gameNight.gameNightId" class="btn btn-primary">
+                                    Bekijk Details
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</body>

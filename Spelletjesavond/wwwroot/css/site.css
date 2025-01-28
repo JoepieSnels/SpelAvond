@@ -1,22 +1,41 @@
 html {
-  font-size: 14px;
+	font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+	html {
+		font-size: 16px;
+	}
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+	box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+	position: relative;
+	min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+	margin-bottom: 60px;
+}
+/* CSS voor de 'Coffee Soda' stijl */
+h1 {
+	font-family: "Courier New", Courier, monospace; /* Font-stijl */
+	font-size: 2.5em; /* Grootte van de tekst */
+	text-transform: uppercase; /* Maakt de tekst allemaal hoofdletters */
+	letter-spacing: 2px; /* Verhoogt de spatiëring tussen letters */
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Kleine schaduw voor effect */
+}
+
+/* Specifieke styling voor iconen als je ze wilt aanpassen */
+.coffee-soda-style i {
+	font-size: 2.5em; /* Vergroot de grootte van de iconen */
+	color: #6b4226; /* Zelfde bruine kleur voor iconen */
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Zorgt voor dezelfde schaduw op de iconen */
 }

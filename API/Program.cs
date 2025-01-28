@@ -15,6 +15,8 @@ builder.Services.AddDbContext<GamenightDBContext>(options =>
 
 // Voeg de repository toe aan de DI-container
 builder.Services.AddScoped<IGameNightRepository, GamenightRepositoryEF>();
+builder.Services.AddScoped<IReviewsRepository, ReviewRepositoryEF>();
+
 
 // Voeg de controllers toe aan de container en configureer de JSON-instellingen
 builder.Services.AddControllers().AddJsonOptions(options =>

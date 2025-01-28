@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Spelavond\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
     "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\DomainServices\\DomainServices.csproj": {
@@ -133,14 +133,14 @@
         }
       }
     },
-    "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Spelavond\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Spelavond\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Spelavond\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\SpelAvond\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Gebruiker\\Documents\\IndividueleC#project\\Spelavond\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config"

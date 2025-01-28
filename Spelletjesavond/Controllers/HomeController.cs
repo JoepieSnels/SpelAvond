@@ -239,10 +239,10 @@ public class HomeController : Controller
             games = selectedGames,
             food = string.Join(", ", model.food) // Converteer de lijst naar een string
         };
-
+        
         // Voeg de GameNight toe aan de database
         _gameNightRepository.AddGameNight(gameNight);
-
+        TempData["SuccessMessage"] = "De spelavond is succesvol aangemaakt!";
         return RedirectToAction("Index");
     }
 
@@ -342,13 +342,13 @@ public class HomeController : Controller
 
         if (gameNight == null)
         {
-            TempData["Error"] = "De gekozen spelavond bestaat niet.";
+            TempData["ErrorMessage"] = "De gekozen spelavond bestaat niet.";
             return RedirectToAction("Index", "Home");
         }
         // Controleer of de spelavond al vol is;
         if (gameNight.players.Count == gameNight.maxPlayers)
         {
-            TempData["Error"] = "Deze spelavond is al vol.";
+            TempData["ErrorMessage"] = "Deze spelavond is al vol.";
             return RedirectToAction("AvailableGameNights", "Home");
         }
         var currentDate = DateTime.Now;
@@ -362,7 +362,7 @@ public class HomeController : Controller
         // Controleer of de spelavond 18+ is en of de speler jonger is dan 18
         if (gameNight.is18Plus && age < 18)
         {
-            TempData["Error"] = "Deze spelavond is alleen voor spelers van 18 jaar en ouder.";
+            TempData["ErrorMessage"] = "Deze spelavond is alleen voor spelers van 18 jaar en ouder.";
             return RedirectToAction("Index", "Home");
         }
 
@@ -373,13 +373,13 @@ public class HomeController : Controller
 
         if (existingSignUp)
         {
-            TempData["Error"] = "Je bent al aangemeld voor een andere spelavond op deze dag.";
+            TempData["ErrorMessage"] = "Je bent al aangemeld voor een andere spelavond op deze dag.";
             return RedirectToAction("Index", "Home");
         }
 
         // Voeg de inschrijving toe aan de GameNightPlayers tabel
         _gameNightRepository.AddGameNightPlayer(gameNightId, person.personId);
-
+        
         // Bevestigingsmelding en redirect
         TempData["Success"] = "Je bent succesvol aangemeld voor de spelavond!";
         return RedirectToAction("Index", "Home");
